@@ -1,0 +1,5 @@
+type,account,date,time,amount,currency,payee,note,payType,payStatus,category,labels
+Template,Gcash,,8:30 AM,,PHP,Meralco,,Credit card,Uncleared,Utilities,Monthly
+Expense,Cash,"May 05, 2022",7:00 PM,300,PHP,Trial 1,Lorem Ipsum,Credit card,Uncleared,Clothes & shoes,
+Expense,Cash,"May 05, 2022",7:00 PM,200,PHP,Trail 2,Lorem Ipsum,Credit card,Uncleared,"Culture, sports events",
+Income,GCash,"Jun 06, 2022",7:00 PM,1500,USD,Trial 3,Lorem Ipsum,Credit card,Uncleared,Sale,label1
