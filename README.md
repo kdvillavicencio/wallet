@@ -1,7 +1,8 @@
 # Wallet
-Automated data entry for Wallet (by BudgetBakers) webapp
+Automated data entry for Wallet (by BudgetBakers) webapp using Selenium
 
 ## Overview
+This script allows quicker data entry to the Wallet webapp by collecting record data into a csv file.
 
 ### Sample Demo
 ![Sample Demo](./assets/wallet-sample-demo.gif)
@@ -10,22 +11,22 @@ Automated data entry for Wallet (by BudgetBakers) webapp
 Bulk of transaction data should be stored in a csv file with the following columns:
 | Column | Details |
 | --- | --- |
-| type | Exppense, Income, or Transfer |
+| type | options: Expense, Income, or Transfer |
 | account | [Account](https://web.budgetbakers.com/accounts)¹ |
-| date | Mmm DD, YYYY |
-| time | H:MM PM |
+| date | format: "Mmm DD, YYYY" |
+| time | format "H:MM PM" |
 | amount | `number` |
 | currency | *Currency (PHP/USD/etc) |
 | payee | `string`|
 | note | `string` |
 | payType | Payment Type² |
-| payStatus | Cleared, Uncleared, or Reconciled |
+| payStatus | options: Cleared, Uncleared, or Reconciled |
 | category | Wallet-defined [Category](https://web.budgetbakers.com/settings/categories)³ |
 | labels | User-defined [Label](https://web.budgetbakers.com/settings/labels)⁴|
 
 **NOTES**  
 ¹ User-defined Account name (case-sensitive)  
-² Cash, Debit card, Credit card, Transfer, Voucher, Mobile payment, Web payment  
+² options: Cash, Debit card, Credit card, Transfer, Voucher, Mobile payment, Web payment  
 ³ Default or user-defined Category (case-sensitive), add `" "` if contains comma  
 ⁴ User-defined labels, add `" "` for multiple, comma-separated values  
  
@@ -68,9 +69,6 @@ APP_PASSWORD=password
 
 ```
 
-### Usage
-1. Run the script
-    ```bash
-    python src/main.py
-    ```
+### Usage 
+1. Run the script using  `python src/main.py`.
 2. When prompted, enter the filepath of the csv file.
